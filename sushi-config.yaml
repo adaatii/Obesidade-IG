@@ -45,9 +45,9 @@ publisher:
 #
 pages:
     index.md:
-      title: Home
-    profiles.md:
-      title: Profiles
+      title: Início
+    downloads.md:
+      title: Downloads
 #   implementation.xml:
 #   examples.xml:
 #     title: Examples Overview
@@ -77,10 +77,11 @@ pages:
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Home: index.html
-  Artifacts: artifacts.html
-  Perfis: profiles.html
-
+  Início: index.html
+  Artefatos: artifacts.html
+  Downloads: downloads.html
+  #Obesidade: TODO
+  #Exemplos: TODO
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │
