@@ -44,7 +44,7 @@ Description: "Observação referente ao estado de obesidade do paciente."
 * identifier.value = "OBESITY-12345"
 * code.coding[0].system = "http://snomed.info/sct"
 * code.coding[0].code = #763158003
-* code.coding[0].display = "Medicamento"
+* code.coding[0].display = "Medicinal product"
 * batch.lotNumber = "OBES12345"
 * batch.expirationDate = "2026-06-30"
 

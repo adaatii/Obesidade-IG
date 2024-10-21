@@ -4,7 +4,6 @@ Id: ConditionOB
 Description: "Esse perfil representa as restrições aplicadas ao recurso Condition
 e descreve as expectativas mínimas para o recurso Condition."
 
-
 * id ^short = "Identificador lógico deste artefato"
 * id ^definition = "Identificador lógico deste artefato"
 * identifier ^short = "Identificadores externos para este recurso"
@@ -58,3 +57,29 @@ e descreve as expectativas mínimas para o recurso Condition."
 * evidence.detail ^definition = "Referência à informações de apoio"
 * note ^short = "Informações adicionais sobre a condição"
 * note ^definition = "Informações adicionais sobre a condição"
+
+// Example
+Instance: ConditionExample
+InstanceOf: ConditionOB
+Title: "Exemplo de Condição"
+Description: "Condição referente ao paciente."
+
+* id = "CON-12345"
+* clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
+* clinicalStatus.coding[0].code = #active
+* verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+* verificationStatus.coding[0].code = #confirmed
+* category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
+* category[0].coding[0].code = #problem-list-item
+* severity.coding[0].system = "http://snomed.info/sct"
+* severity.coding[0].code = #24484000
+* code.coding[0].system = "http://snomed.info/sct"
+* code.coding[0].code = #84114007
+* bodySite[0].coding[0].system = "http://snomed.info/sct"
+* bodySite[0].coding[0].code = #38266002
+* subject.reference = "Patient/PAT-12345"
+* onsetDateTime = "2020-01-01T00:00:00Z"
+* recordedDate = "2020-01-05"
+* evidence[0].code.coding[0].system = "http://snomed.info/sct"
+* evidence[0].code.coding[0].code = #386661006
+* note[0].text = "Paciente apresenta sintomas leves." // Informações adicionais sobre a condição

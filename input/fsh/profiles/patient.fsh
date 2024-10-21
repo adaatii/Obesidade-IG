@@ -75,6 +75,7 @@ e descreve as expectativas mínimas para o recurso Patient."
 * identifier[registroInterno].type.coding.display ^definition = "Texto que representa a codificação do tipo do identificador do paciente"
 * identifier[registroInterno].type.text ^short = "Texto do tipo do identificador do paciente"
 * identifier[registroInterno].type.text ^definition = "Texto que representa o tipo do identificador do paciente"
+* identifier[registroInterno].system = "https://m-caretech.com.br/interopera/obesidade-ig" (exactly)
 * identifier[registroInterno].value 1..
 * identifier[registroInterno].value ^short = "Valor do identificador do paciente"
 * identifier[registroInterno].value ^definition = "Valor do identificador do paciente"
@@ -171,13 +172,11 @@ Usage: #example
 * identifier[cpf].use = #official
 * identifier[cpf].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
 * identifier[cpf].type.coding[0].code = #TAX
-* identifier[cpf].type.coding[0].display = "CPF"
 * identifier[cpf].system = "https://saude.gov.br/sid/cpf" (exactly)
 * identifier[cpf].value = "123.456.789-09" (exactly)
 * identifier[registroInterno].use = #official
 * identifier[registroInterno].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
 * identifier[registroInterno].type.coding[0].code = #HC
-* identifier[registroInterno].type.coding[0].display = "Registro Interno"
 * identifier[registroInterno].value = "REG-2024-001" (exactly)
 * name[0].use = #official
 * name[0].text = "Marie Curie"

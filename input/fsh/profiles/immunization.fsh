@@ -103,7 +103,7 @@ Description: "Imunização referente ao paciente."
 * status = #completed
 * vaccineCode.coding[0].system = "http://hl7.org/fhir/sid/cvx"
 * vaccineCode.coding[0].code = #135
-* vaccineCode.coding[0].display = "Gripe, alta dose sazonal"
+* vaccineCode.coding[0].display = "Influenza, high dose seasonal"
 * patient = Reference(Patient/PAT-12345)
 * occurrenceDateTime = "2024-10-10T14:00:00Z"
 * recorded = "2024-10-11"
@@ -114,9 +114,9 @@ Description: "Imunização referente ao paciente."
 * expirationDate = "2025-12-31"
 * site.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-ActSite"
 * site.coding[0].code = #LA
-* site.coding[0].display = "Braço Esquerdo"
+* site.coding[0].display = "left arm"
 * route.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
 * route.coding[0].code = #IM
-* route.coding[0].display = "Intra-muscular"
+* route.coding[0].display = "Injection, intramuscular"
 * note.text = "Paciente relatou leve dor no local após a aplicação."
 

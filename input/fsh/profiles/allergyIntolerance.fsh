@@ -57,3 +57,19 @@ e descreve as expectativas mínimas para o recurso AllergyIntolerance."
 * reaction.description ^definition = "Descrição do evento como um todo."
 * reaction.severity ^short = "Avaliação clínica da gravidade de um evento de reação: leve | moderado | grave (do evento como um todo)."
 * reaction.severity ^definition = "mild | moderate | severe (of event as a whole)"
+
+// Example
+Instance: AllergyIntoleranceExample
+InstanceOf: AllergyIntoleranceOB
+Title: "Exemplo de Alergia e Intolerancia"
+Description: "Alergia e Intolerancia referente ao paciente."
+
+* id = "AIT-12345"
+* clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
+* clinicalStatus.coding[0].code = #active
+* verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
+* verificationStatus.coding[0].code = #confirmed
+* patient.reference = "Patient/PAT-12345"
+* onsetDateTime = "2020-01-01T00:00:00Z"
+* recordedDate = "2020-01-05"
+* lastOccurrence = "2023-01-01T12:00:00Z"
