@@ -49,10 +49,7 @@ pages:
     downloads.md:
       title: Downloads
 #   implementation.xml:
-#   examples.xml:
-#     title: Examples Overview
-#     simpleExamples.xml:
-#     complexExamples.xml:
+
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -81,7 +78,7 @@ menu:
   Artefatos: artifacts.html
   Downloads: downloads.html
   #Obesidade: TODO
-  #Exemplos: TODO
+  Examples: artifacts.html#example-example-instances
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │
@@ -132,12 +129,6 @@ menu:
 # The following are simple examples to demonstrate what this might
 # look like:
 #
-# resources:
-#   Patient/my-example-patient:
-#     name: My Example Patient
-#     description: An example Patient
-#     exampleBoolean: true
-#   Patient/bad-example: omit
 #
 #
 # Groups can control certain aspects of the IG generation.  The IG

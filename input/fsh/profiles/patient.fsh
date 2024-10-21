@@ -161,9 +161,41 @@ e descreve as expectativas mínimas para o recurso Patient."
 * contact.gender ^short = "Genero do contato"
 * contact.gender ^definition = "Genero do contato"
 
-//Instance: Patient
-//InstanceOf: PatientOB
-//Description: "An example of a patient with a license to krill."
-//* name
-//  * given[0] = "James"
-//  * family = "Pond"
+// Definindo o paciente
+Instance: PatientExample
+InstanceOf: PatientOB
+Title: "Exemplo de Paciente"
+Description: "Exemplo de paciente com CPF e Registro Interno."
+Usage: #example
+* id = "1254"
+* identifier[cpf].use = #official
+* identifier[cpf].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
+* identifier[cpf].type.coding[0].code = #TAX
+* identifier[cpf].type.coding[0].display = "CPF"
+* identifier[cpf].system = "https://saude.gov.br/sid/cpf" (exactly)
+* identifier[cpf].value = "123.456.789-09" (exactly)
+* identifier[registroInterno].use = #official
+* identifier[registroInterno].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
+* identifier[registroInterno].type.coding[0].code = #HC
+* identifier[registroInterno].type.coding[0].display = "Registro Interno"
+* identifier[registroInterno].value = "REG-2024-001" (exactly)
+* name[0].use = #official
+* name[0].text = "Marie Curie"
+* name[0].family = "Curie"
+* name[0].given[0] = "Marie"
+* telecom[0].system = #phone  // Certifique-se de que "phone" é um código válido
+* telecom[0].value = "123-456-7890"
+* telecom[0].use = #home
+* gender = #female  // Use o código correto para o gênero
+* birthDate = "1867-11-07"
+* address[0].use = #home
+* address[0].line[0] = "Av des. Champs Élysées, 123"
+* address[0].city = "Paris"
+* address[0].district = "District 1"
+* address[0].state = "IDF"
+* address[0].postalCode = "75001"
+* address[0].country = "France"
+* maritalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+* maritalStatus.coding[0].code = #S  // ou o código correto
+* maritalStatus.coding[0].display = "Never Married"
+* maritalStatus.text = "Never Married"
