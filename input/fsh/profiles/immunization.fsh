@@ -92,3 +92,31 @@ e descreve as expectativas mínimas para o recurso Immunization."
 * protocolApplied.doseNumber[x] ^definition = "Número da dose do imunobiológico"
 * protocolApplied.seriesDoses[x] ^short = "Número de doses da série do imunobiológico"
 * protocolApplied.seriesDoses[x] ^definition = "Número de doses da série do imunobiológico"
+
+// Example
+Instance: ImmunizationExample
+InstanceOf: ImmunizationOB
+Title: "Exemplo de Imunização"
+Description: "Imunização referente ao paciente."
+
+* id = "IMM-2024-001"
+* status = #completed
+* vaccineCode.coding[0].system = "http://hl7.org/fhir/sid/cvx"
+* vaccineCode.coding[0].code = #135
+* vaccineCode.coding[0].display = "Gripe, alta dose sazonal"
+* patient = Reference(Patient/PAT-12345)
+* occurrenceDateTime = "2024-10-10T14:00:00Z"
+* recorded = "2024-10-11"
+* primarySource = true
+* reportOrigin.coding[0].system = "http://terminology.hl7.org/CodeSystem/immunization-origin"
+* reportOrigin.coding[0].code = #provider
+* lotNumber = "LOT-789654"
+* expirationDate = "2025-12-31"
+* site.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-ActSite"
+* site.coding[0].code = #LA
+* site.coding[0].display = "Braço Esquerdo"
+* route.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
+* route.coding[0].code = #IM
+* route.coding[0].display = "Intra-muscular"
+* note.text = "Paciente relatou leve dor no local após a aplicação."
+

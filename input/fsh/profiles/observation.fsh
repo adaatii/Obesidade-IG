@@ -61,3 +61,34 @@ e descreve as expectativas mínimas para o recurso Observation."
 * specimen ^definition = "Amostra utilizada para esta observação"
 * device ^short = "Dispositivo de medida da observação"
 * device ^definition = "Dispositivo de medida da observação"
+
+// Example
+Instance: ObservationExample
+InstanceOf: ObservationOB
+Title: "Exemplo de Observação"
+Description: "Observação referente ao estado de obesidade do paciente."
+
+* id = "obs-001" (exactly)
+* status = #active
+* category.coding[0].system = "http://terminology.hl7.org/CodeSystem/observation-category" (exactly)
+* category.coding[0].code = #vital-signs
+* category.coding[0].display = "Sinais Vitais"
+* code.coding[0].system = "http://loinc.org" (exactly)
+* code.coding[0].code = #8867-4 (exactly)
+* code.coding[0].display = "Frequência Cardíaca"
+* subject = Reference(PatientOB/PatientExample)
+* effectiveDateTime = "2024-01-11T11:45:00Z" (exactly)
+* issued = "2024-01-11T11:45:00Z" (exactly)
+* valueQuantity.value = 30 (exactly)
+* valueQuantity.unit = "kg/m2" (exactly)
+* valueQuantity.system = "http://unitsofmeasure.org" (exactly)
+* valueQuantity.code = #kg/m2 (exactly)
+* interpretation.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" (exactly)
+* interpretation.coding[0].code = #high
+* interpretation.coding[0].display = "Alto"
+* bodySite.coding[0].system = "http://snomed.info/sct" (exactly)
+* bodySite.coding[0].code = #51185008 (exactly)
+* bodySite.coding[0].display = "Tórax"
+* method.coding[0].system = "http://snomed.info/sct" (exactly)
+* method.coding[0].code = #29303009 (exactly)
+* method.coding[0].display = "Eletrocardiograma"

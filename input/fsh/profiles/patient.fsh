@@ -167,7 +167,7 @@ InstanceOf: PatientOB
 Title: "Exemplo de Paciente"
 Description: "Exemplo de paciente com CPF e Registro Interno."
 Usage: #example
-* id = "1254"
+* id = "PAT-12345"
 * identifier[cpf].use = #official
 * identifier[cpf].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
 * identifier[cpf].type.coding[0].code = #TAX
@@ -183,10 +183,10 @@ Usage: #example
 * name[0].text = "Marie Curie"
 * name[0].family = "Curie"
 * name[0].given[0] = "Marie"
-* telecom[0].system = #phone  // Certifique-se de que "phone" é um código válido
+* telecom[0].system = #phone
 * telecom[0].value = "123-456-7890"
 * telecom[0].use = #home
-* gender = #female  // Use o código correto para o gênero
+* gender = #female
 * birthDate = "1867-11-07"
 * address[0].use = #home
 * address[0].line[0] = "Av des. Champs Élysées, 123"
@@ -196,6 +196,6 @@ Usage: #example
 * address[0].postalCode = "75001"
 * address[0].country = "France"
 * maritalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
-* maritalStatus.coding[0].code = #S  // ou o código correto
-* maritalStatus.coding[0].display = "Never Married"
-* maritalStatus.text = "Never Married"
+* maritalStatus.coding[0].code = #M
+* maritalStatus.coding[0].display = "Married"
+* maritalStatus.text = "Married"
