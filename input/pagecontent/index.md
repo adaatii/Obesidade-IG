@@ -1,4 +1,3 @@
-
 ### Objetivo
 
 Este FHIR Implementation Guide (FHIR IG) visa atender às necessidades do curso “FHIR ShortHand: Desenvolvendo FHIR Implementation Guides” na criação e publicação de FHIR IGs utilizando FHIR Shorthand (FSH). No contexto da Linha de Cuidado em Obesidade, este FHIR IG irá possibilitar gestão eficaz e integrada do tratamento, assegurando que informações críticas, como diagnósticos e dados de monitoramento, sejam compartilhadas de forma precisa e em tempo real entre médicos, nutricionistas, psicólogos e outros profissionais.

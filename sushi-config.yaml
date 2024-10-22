@@ -46,8 +46,23 @@ publisher:
 pages:
     index.md:
       title: Início
+    resources.md:
+      title: Recursos
+      allergyIntoleranceOB.md:
+        title: AllergyIntoleranceOB
+      conditionOB.md:
+        title: ConditionOB
+      immunizationOB.md:
+        title: ImmunizationOB
+      medicationOB.md:
+        title: MedicationOB
+      observationOB.md:
+        title: ObservationOB
+      patientOB.md:
+        title: PatientOB 
     downloads.md:
       title: Downloads
+
 #   implementation.xml:
 
 #
@@ -75,9 +90,10 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Início: index.html
-  Artefatos: artifacts.html
-  Downloads: downloads.html
   #Obesidade: TODO
+  Recursos: resources.html
+  Downloads: downloads.html
+  Artefatos: artifacts.html
   Examples: artifacts.html#example-example-instances
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
