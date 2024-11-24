@@ -4,6 +4,18 @@ Id: PatientOB
 Description: "Esse perfil representa as restrições aplicadas ao recurso Patient
 e descreve as expectativas mínimas para o recurso Patient."
 
+* extension ^short = "Extensões adicionais"
+* extension ^definition = "Extensões adicionais"
+* extension contains
+    $structuredefinition-patient-birthPlace named localNascimento 0..1 and
+    RacaExtension named raca 0..1 and
+    SexoAoNascer named sexoAoNascer 0..1
+* extension[localNascimento] ^short = "Local de nascimento do paciente"
+* extension[localNascimento] ^definition = "Local de nascimento do paciente"
+* extension[raca] ^short = "Raça do paciente"
+* extension[raca] ^definition = "Raça do paciente"
+* extension[sexoAoNascer] ^short = "Sexo ao nascimento do paciente"
+* extension[sexoAoNascer] ^definition = "Sexo ao nascimento do paciente"
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.description = "Identificadores nacionais do paciente"
@@ -108,16 +120,6 @@ e descreve as expectativas mínimas para o recurso Patient."
 
 * gender ^short = "Sexo"
 * gender ^definition = "male | female | other | unknown"
-//* extension contains
-//    Raca named raca 0..1 and
-//    SexoNascimento named sexoNascimento 0..1 and
-//    $patient-genderIdentity named identidadeGenero 0..1
-//* extension[raca] ^short = "Raça do paciente"
-//* extension[raca] ^definition = "Raça do paciente"
-//* extension[sexoNascimento] ^short = "Sexo do nascimento do paciente"
-//* extension[sexoNascimento] ^definition = "Sexo do nascimento do paciente"
-//* extension[identidadeGenero] ^short = "Identidade de gênero do paciente"
-//* extension[identidadeGenero] ^definition = "Identidade de gênero do paciente"
 * birthDate ^short = "Data de nascimento do paciente"
 * birthDate ^definition = "Data de nascimento do paciente"
 
@@ -169,6 +171,19 @@ Title: "Exemplo de Paciente"
 Description: "Exemplo de paciente com CPF e Registro Interno."
 Usage: #example
 * id = "PAT-12345"
+* extension[localNascimento].valueAddress.use = #home
+* extension[localNascimento].valueAddress.line[0] = "Av des. Champs Élysées, 123"
+* extension[localNascimento].valueAddress.city = "Paris"
+* extension[localNascimento].valueAddress.district = "District 1"
+* extension[localNascimento].valueAddress.state = "IDF"
+* extension[localNascimento].valueAddress.postalCode = "75001"
+* extension[localNascimento].valueAddress.country = "France"
+* extension[raca].valueCodeableConcept.coding[0].system = $structuredefinition-patient-race
+* extension[raca].valueCodeableConcept.coding[0].code = #01
+* extension[raca].valueCodeableConcept.coding[0].display = "Branca"
+* extension[sexoAoNascer].valueCodeableConcept.coding[0].system = $LOINC
+* extension[sexoAoNascer].valueCodeableConcept.coding[0].code = #LA3-6
+* extension[sexoAoNascer].valueCodeableConcept.coding[0].display = "Female"
 * identifier[cpf].use = #official
 * identifier[cpf].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
 * identifier[cpf].type.coding[0].code = #TAX
